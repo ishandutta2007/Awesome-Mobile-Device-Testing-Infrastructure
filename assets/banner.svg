@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#0b0f19; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="card-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <linearGradient id="device-screen-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <!-- Filter for soft neon glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    /* CSS Animations for dynamic elements */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.65; transform: scale(1.08); }
+    }
+    @keyframes floatParticle {
+      0% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
+      50% { transform: translateY(-15px) translateX(10px); opacity: 0.7; }
+      100% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
+    }
+    @keyframes statusBlink {
+      0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px #10b981); }
+      50% { opacity: 0.4; filter: drop-shadow(0 0 1px #10b981); }
+    }
+    @keyframes signalWave {
+      0% { stroke-dashoffset: 60; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    .pulse-blob {
+      transform-origin: center;
+      animation: pulseGlow 6s ease-in-out infinite;
+    }
+    .floating-dot-1 { animation: floatParticle 5s ease-in-out infinite; }
+    .floating-dot-2 { animation: floatParticle 7s ease-in-out infinite reverse; }
+    .floating-dot-3 { animation: floatParticle 6s ease-in-out 1s infinite; }
+    .status-active { animation: statusBlink 2.5s ease-in-out infinite; }
+    .wave-line {
+      stroke-dasharray: 8 4;
+      animation: signalWave 3s linear infinite;
+    }
+  </style>
+
+  <!-- Deep Cosmic Background -->
+  <rect width="1200" height="360" fill="url(#bg-grad)"/>
+
+  <!-- Subdued Grid pattern -->
+  <g stroke="#334155" stroke-width="0.5" stroke-opacity="0.25">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="150" y1="0" x2="150" y2="360"/>
+    <line x1="300" y1="0" x2="300" y2="360"/>
+    <line x1="450" y1="0" x2="450" y2="360"/>
+    <line x1="600" y1="0" x2="600" y2="360"/>
+    <line x1="750" y1="0" x2="750" y2="360"/>
+    <line x1="900" y1="0" x2="900" y2="360"/>
+    <line x1="1050" y1="0" x2="1050" y2="360"/>
+  </g>
+
+  <!-- Ambient Glowing Orbs (Dynamic in background) -->
+  <circle cx="200" cy="90" r="130" fill="#38bdf8" opacity="0.12" filter="url(#glow)" class="pulse-blob" />
+  <circle cx="1020" cy="180" r="160" fill="#818cf8" opacity="0.15" filter="url(#glow)" class="pulse-blob" style="animation-delay: -3s;" />
+  <circle cx="600" cy="310" r="120" fill="#c084fc" opacity="0.1" filter="url(#glow)" class="pulse-blob" style="animation-delay: -1.5s;" />
+
+  <!-- Animated Floating Ambient Dots -->
+  <circle cx="220" cy="70" r="3" fill="#38bdf8" class="floating-dot-1" />
+  <circle cx="340" cy="280" r="2.5" fill="#818cf8" class="floating-dot-2" />
+  <circle cx="980" cy="80" r="3.5" fill="#c084fc" class="floating-dot-3" />
+  <circle cx="1110" cy="260" r="2.5" fill="#38bdf8" class="floating-dot-1" />
+
+  <!-- Background Interactive / Dynamic Visual Elements (Right Side Graphic) -->
+  <g transform="translate(850, 45)">
+    <!-- Decorative Device / Cloud Matrix Graphic -->
+    <!-- Connecting Infrastructure Waves -->
+    <path d="M 40 180 Q 90 120 140 160 T 240 130" fill="none" stroke="#38bdf8" stroke-width="1.8" opacity="0.5" class="wave-line"/>
+    <path d="M 20 120 Q 80 60 150 100 T 250 80" fill="none" stroke="#818cf8" stroke-width="1.5" opacity="0.4" class="wave-line" style="animation-duration: 4s;"/>
+
+    <!-- Simulated Mobile Device Mock 1 (Front View) -->
+    <rect x="140" y="40" width="105" height="190" rx="16" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+    <rect x="146" y="52" width="93" height="166" rx="10" fill="url(#device-screen-grad)"/>
+    <!-- Speaker & Camera -->
+    <rect x="177" y="45" width="30" height="3" rx="1.5" fill="#334155"/>
+    <circle cx="192" cy="60" r="2.5" fill="#38bdf8" opacity="0.7"/>
+    <!-- Device Screen UI -->
+    <rect x="156" y="75" width="73" height="16" rx="4" fill="#38bdf8" opacity="0.2"/>
+    <rect x="156" y="100" width="50" height="6" rx="3" fill="#94a3b8" opacity="0.4"/>
+    <rect x="156" y="112" width="65" height="6" rx="3" fill="#94a3b8" opacity="0.25"/>
+    <rect x="156" y="124" width="40" height="6" rx="3" fill="#94a3b8" opacity="0.25"/>
+    <!-- Simulated App Test Success Indicator -->
+    <circle cx="164" cy="155" r="5" fill="#10b981" class="status-active"/>
+    <text x="176" y="158" font-size="9" fill="#10b981" font-weight="600">PASSED</text>
+    <rect x="156" y="172" width="73" height="22" rx="4" fill="#818cf8" opacity="0.25"/>
+    <text x="163" y="186" font-size="8.5" fill="#c7d2fe">Auto-Testing</text>
+
+    <!-- Simulated Tablet / Second Device (Slightly behind) -->
+    <g opacity="0.75">
+      <rect x="50" y="80" width="90" height="150" rx="12" fill="#090d16" stroke="#334155" stroke-width="1.8"/>
+      <rect x="55" y="90" width="80" height="130" rx="7" fill="#0b1120"/>
+      <circle cx="95" cy="85" r="2" fill="#64748b"/>
+      <rect x="65" y="105" width="60" height="12" rx="3" fill="#818cf8" opacity="0.2"/>
+      <rect x="65" y="125" width="45" height="5" rx="2" fill="#64748b" opacity="0.3"/>
+      <rect x="65" y="135" width="55" height="5" rx="2" fill="#64748b" opacity="0.3"/>
+      <circle cx="73" cy="160" r="4" fill="#38bdf8" class="status-active" style="animation-delay: -1s;"/>
+      <text x="83" y="163" font-size="8.5" fill="#38bdf8">ADB Live</text>
+    </g>
+
+    <!-- Cloud Testing Hub Badge / Chip -->
+    <g transform="translate(15, 235)">
+      <rect x="0" y="0" width="135" height="26" rx="13" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" opacity="0.95"/>
+      <circle cx="14" cy="13" r="4.5" fill="#10b981" class="status-active"/>
+      <text x="26" y="17" font-size="10" fill="#f8fafc" font-weight="600">Real Device Cloud</text>
+    </g>
+
+    <g transform="translate(145, 15)">
+      <rect x="0" y="0" width="115" height="24" rx="12" fill="#1e293b" stroke="#818cf8" stroke-width="1.2" opacity="0.95"/>
+      <circle cx="12" cy="12" r="4" fill="#38bdf8" class="status-active" style="animation-delay: -0.7s;"/>
+      <text x="23" y="16" font-size="9.5" fill="#e2e8f0" font-weight="600">Open-Source STF</text>
+    </g>
+  </g>
+
+  <!-- FOREGROUND TEXT SECTION: Centered Left, Clean & Extremely Legible -->
+  <g transform="translate(80, 0)">
+    <!-- Category Pill Badge -->
+    <g transform="translate(0, 56)">
+      <rect x="0" y="0" width="280" height="28" rx="14" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <circle cx="14" cy="14" r="4" fill="#38bdf8"/>
+      <text x="26" y="18" fill="#94a3b8" font-size="11" font-weight="700" letter-spacing="1">CURATED INFRASTRUCTURE</text>
+    </g>
+
+    <!-- Main Title (Gradient Foreground) -->
+    <text x="0" y="132" fill="url(#primary-grad)" font-size="44" font-weight="800" letter-spacing="-0.5">
+      Mobile Device Testing
+    </text>
+    <text x="0" y="182" fill="#ffffff" font-size="40" font-weight="800" letter-spacing="-0.5">
+      Infrastructure
+    </text>
+
+    <!-- Subtitle (Clear Foreground) -->
+    <text x="0" y="224" fill="#94a3b8" font-size="16" font-weight="400">
+      Enterprise SaaS Device Clouds &amp; Open-Source Farms for Real iOS &amp; Android Testing
+    </text>
+
+    <!-- Feature Tags Row -->
+    <g transform="translate(0, 260)">
+      <!-- Tag 1 -->
+      <g>
+        <rect x="0" y="0" width="128" height="30" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="12" y="19" fill="#38bdf8" font-size="12" font-weight="600">⚡ Real Devices</text>
+      </g>
+      <!-- Tag 2 -->
+      <g transform="translate(138, 0)">
+        <rect x="0" y="0" width="138" height="30" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="12" y="19" fill="#818cf8" font-size="12" font-weight="600">🤖 AI Automation</text>
+      </g>
+      <!-- Tag 3 -->
+      <g transform="translate(286, 0)">
+        <rect x="0" y="0" width="132" height="30" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="12" y="19" fill="#c084fc" font-size="12" font-weight="600">📱 Open-Source</text>
+      </g>
+      <!-- Tag 4 -->
+      <g transform="translate(428, 0)">
+        <rect x="0" y="0" width="136" height="30" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="12" y="19" fill="#10b981" font-size="12" font-weight="600">☁️ Device Clouds</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Line -->
+  <rect x="0" y="356" width="1200" height="4" fill="url(#primary-grad)"/>
+</svg>
