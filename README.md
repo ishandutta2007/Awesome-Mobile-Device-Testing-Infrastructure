@@ -30,6 +30,7 @@
   - [Open-Source Solutions Detail](#-open-source-solutions-detail)
 - [📊 Feature Matrix & Architectural Comparison](#-feature-matrix--architectural-comparison)
 - [🤝 Contributing Guidelines](#-contributing-guidelines)
+- [💖 Support & Sponsorship](#-support--sponsorship)
 - [📈 Star History](#-star-history)
 - [📄 License & Disclaimers](#-license--disclaimers)
 
@@ -271,9 +272,23 @@ Contributions are warmly appreciated! If you maintain or use a noteworthy mobile
 
 ---
 
+## 💖 Support & Sponsorship
+
+Thank you so much for exploring and supporting **Awesome Mobile Device Testing Infrastructure**! 🙌
+
+If this curated repository has saved you time, helped you evaluate device testing infrastructure, or streamlined your mobile QA architecture, please consider supporting the project:
+
+- 🌟 **Star** this repository on GitHub to help others discover it.
+- 🍴 **Fork** and contribute back new open-source or commercial testing platforms.
+- 📢 **Share** this resource with your colleagues, engineering teams, and QA communities.
+- ☕ **Buy me a coffee / Sponsor**: If you'd like to back ongoing maintenance and open-source research, contributions via the GitHub Sponsors program are deeply appreciated!  
+  👉 **[Support on GitHub Sponsors](https://github.com/sponsors/ishandutta2007)**
+
+---
+
 ## 📈 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=ishandutta2007/Awesome-Mobile-Device-Testing-Infrastructure&type=Date)](https://star-history.com/#ishandutta2007/Awesome-Mobile-Device-Testing-Infrastructure&Date)
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Mobile-Device-Testing-Infrastructure&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Mobile-Device-Testing-Infrastructure&type=date&legend=top-left)
 
 ---
 
